@@ -1,0 +1,16 @@
+metrics:
+  - name: throughput
+    type: iperf
+    interval: 10
+
+  - name: latency
+    type: ping
+    interval: 10
+
+  - name: packet_loss
+    type: ping
+    interval: 10
+
+output:
+  format: csv
+  directory: /path/to/output
