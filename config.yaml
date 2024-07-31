@@ -1,16 +1,26 @@
-metrics:
-  - name: throughput
-    type: iperf
-    interval: 10
+network:
+  name: my-network
+  type: mininet
+  topology: tree
+  depth: 2
+  fanout: 3
 
-  - name: latency
-    type: ping
-    interval: 10
+monitoring:
+  enabled: true
+  interval: 5  # in seconds
 
-  - name: packet_loss
-    type: ping
-    interval: 10
+nodes:
+  - name: node1
+    type: switch
+  - name: node2
+    type: host
+    ip: 10.0.0.1
+  - name: node3
+    type: host
+    ip: 10.0.0.2
 
-output:
-  format: csv
-  directory: /path/to/output
+performance:
+  metrics:
+    - latency
+    - throughput
+  log_file: /var/log/nfvperf.log
