@@ -1,0 +1,5 @@
+latency:
+  tool: iperf
+   parameters:
+    - -c <server-ip>  # IP address of the iperf server
+    - -t 10  # Duration of the test (in seconds)
