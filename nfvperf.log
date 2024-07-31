@@ -1,0 +1,12 @@
+logging:
+  log_file: /var/log/nfvperf.log
+  log_level: INFO
+
+monitoring:
+  enabled: true
+  interval: 5  # in seconds
+
+performance:
+  metrics:
+    - latency
+    - throughput
